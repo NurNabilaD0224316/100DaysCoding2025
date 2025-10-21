@@ -6,7 +6,6 @@ public class Day44 {
 
         System.out.print("Masukkan nilai Anda: ");
         int nilai = input.nextInt();
-
         String predikat;
         
         if (nilai >= 90) {
