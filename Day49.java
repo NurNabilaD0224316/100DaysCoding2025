@@ -10,11 +10,5 @@ public class Day49 {
         String jenis = (angka % 2 == 0) ? "Genap" : "Ganjil";
         System.out.println("Angka " + angka + " adalah " + jenis);
 
-        System.out.print("Masukkan nilai: ");
-        int nilai = input.nextInt();
-
-        String status = (nilai >= 60) ? "Lulus" : "Tidak Lulus";
-        System.out.println("Status: " + status);
-
     }
 }
