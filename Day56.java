@@ -10,13 +10,15 @@ public class Day56 {
         do {
             System.out.print("Masukkan Username: ");
             username = input.nextLine();
-
             System.out.print("Masukkan PIN: ");
             pin = input.nextInt();
-            input.nextLine();
+            input.nextLine(); 
 
             if (username.equalsIgnoreCase("Nbila") && pin == 2804) {
                 System.out.println("Login Sebagai Pengguna");
+                loginBerhasil = true;
+            } else if (username.equalsIgnoreCase("Admin") && pin == 9999) {
+                System.out.println("Login Sebagai Admin");
                 loginBerhasil = true;
             } else {
                 System.out.println("Username atau PIN salah. Silakan coba lagi!");
@@ -25,7 +27,6 @@ public class Day56 {
             if (percobaan == 3 && !loginBerhasil) {
                 System.out.println("Login Gagal! Akun anda terblokir.");
             }
-            
         } while (!loginBerhasil && percobaan < 3);
     }
 }
