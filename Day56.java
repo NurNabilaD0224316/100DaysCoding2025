@@ -1,9 +1,10 @@
 import java.util.Scanner;
+
 public class Day56 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String username;
-        int nim;
+        String nim;
         int percobaan = 0;
         boolean loginBerhasil = false;
 
@@ -12,13 +13,12 @@ public class Day56 {
             username = input.nextLine();
 
             System.out.print("Masukkan NIM: ");
-            nim = input.nextInt();
-            input.nextLine();
+            nim = input.nextLine(); // ubah jadi nextLine() karena nim berupa teks
 
-            if (username.equalsIgnoreCase("Nbila") && nim == 224316) {
+            if (username.equalsIgnoreCase("Nbila") && nim.equals("D224316")) {
                 System.out.println("Login Sebagai Pengguna");
                 loginBerhasil = true;
-            } else if (username.equalsIgnoreCase("Admin") && nim == D0224316) {
+            } else if (username.equalsIgnoreCase("Admin") && nim.equals("D0224316")) {
                 System.out.println("Login Sebagai Admin");
                 loginBerhasil = true;
             } else {
