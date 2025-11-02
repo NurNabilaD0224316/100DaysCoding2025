@@ -15,7 +15,7 @@ public class Day56 {
             System.out.print("Masukkan NIM: ");
             nim = input.nextLine(); // ubah jadi nextLine() karena nim berupa teks
 
-            if (username.equalsIgnoreCase("Nbila") && nim.equals("D224316")) {
+            if (username.equalsIgnoreCase("Nbila") && nim.equals("D0224316")) {
                 System.out.println("Login Sebagai Pengguna");
                 loginBerhasil = true;
             } else if (username.equalsIgnoreCase("Admin") && nim.equals("D0224316")) {
