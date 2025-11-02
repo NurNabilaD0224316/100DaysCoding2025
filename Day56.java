@@ -2,26 +2,30 @@ import java.util.Scanner;
 public class Day56 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int pinBenar = 1234;   
-        int pin;             
-        int percobaan = 0;     
-        boolean akses = false; 
+        String username;
+        int pin;
+        int percobaan = 0;
+        boolean loginBerhasil = false;
 
         do {
-            System.out.print("Masukkan PIN Anda: ");
+            System.out.print("Masukkan Username: ");
+            username = input.nextLine();
+
+            System.out.print("Masukkan PIN: ");
             pin = input.nextInt();
+            input.nextLine();
 
-            if (pin == pinBenar) {
-                System.out.println("PIN Benar. Selamat datang di sistem ATM!");
-                akses = true; 
+            if (username.equalsIgnoreCase("Nbila") && pin == 2804) {
+                System.out.println("Login Sebagai Pengguna");
+                loginBerhasil = true;
             } else {
-                System.out.println("PIN Salah. Silakan coba lagi.");
-                percobaan++; 
+                System.out.println("Username atau PIN salah. Silakan coba lagi!");
+                percobaan++;
             }
-            if (percobaan == 3 && !akses) {
-                System.out.println("Akun anda terblokir karena 3 kali salah.");
+            if (percobaan == 3 && !loginBerhasil) {
+                System.out.println("Login Gagal! Akun anda terblokir.");
             }
-
-        } while (!akses && percobaan < 3); 
+            
+        } while (!loginBerhasil && percobaan < 3);
     }
 }
